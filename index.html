@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroLeadX: Domine a Inteligência Artificial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px #3d67ff, 0 0 10px #3d67ff, 0 0 15px #3d67ff;
+        }
+        
+        .neon-border {
+            box-shadow: 0 0 5px #3d67ff, 0 0 10px #3d67ff;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(61, 103, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(61, 103, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(61, 103, 255, 0);
+            }
+        }
+        
+        .typing {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #3d67ff;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3d67ff }
+        }
+        
+        .code-bg {
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="monospace" font-size="12" fill="rgba(61,103,255,0.2)">function IA() {</text><text x="10" y="40" font-family="monospace" font-size="12" fill="rgba(61,103,255,0.2)">  return "POWER";</text><text x="10" y="60" font-family="monospace" font-size="12" fill="rgba(61,103,255,0.2)">}</text></svg>');
+            background-size: 100px 100px;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(61, 103, 255, 0.3);
+        }
+        
+        .glow {
+            filter: drop-shadow(0 0 5px rgba(61, 103, 255, 0.7));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Fixo -->
+    <header class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="tech-font text-2xl font-bold text-white neon-text mr-10">
+                    Neuro<span class="text-blue-400">Lead</span><span class="text-purple-500">X</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-blue-400 transition">Início</a>
+                    <a href="#comparison" class="text-gray-300 hover:text-blue-400 transition">Antes vs Depois</a>
+                    <a href="#examples" class="text-gray-300 hover:text-blue-400 transition">Exemplos Reais</a>
+                    <a href="#earn" class="text-gray-300 hover:text-blue-400 transition">Ganhar com IA</a>
+                    <a href="#leads" class="text-red-400 font-bold hover:text-red-300 transition">Comprar Leads 🔥</a>
+                </nav>
+            </div>
+            <a href="https://t.me/NeuroLeadX" target="_blank" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md font-bold hover:from-blue-600 hover:to-purple-700 transition pulse">
+                <i class="fab fa-telegram mr-2"></i> Telegram
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="code-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="tech-font text-4xl md:text-6xl font-bold mb-6 text-white neon-text typing">
+                Você está usando IA... ou sendo usado por ela?
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Descubra como dominar o ChatGPT e outras IAs para resultados que poucos ousam imaginar.
+            </p>
+            <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xl font-bold px-8 py-4 rounded-lg hover:from-blue-600 hover:to-purple-700 transition transform hover:scale-105 pulse">
+                🚀 Quero acessar o poder oculto da IA →
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção: O Que Você Está Perdendo -->
+    <section id="comparison" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl font-bold text-center mb-16 text-white">
+                O Que Você Está <span class="text-blue-400">Perdendo</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Bloco 1 - Usuário Comum -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-400">Usuário Comum</h3>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-4 rounded mb-4">
+                        <p class="text-sm text-gray-400 mb-1">Prompt:</p>
+                        <p class="text-gray-300">"Como ganhar dinheiro online?"</p>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-4 rounded mb-4">
+                        <p class="text-sm text-gray-400 mb-1">Resposta:</p>
+                        <p class="text-gray-300">"Existem várias formas como freelancing, marketing digital, investimentos..."</p>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-4 rounded">
+                        <p class="text-sm text-gray-400 mb-1">Resultado:</p>
+                        <p class="text-gray-300">Informações genéricas que qualquer um pode encontrar</p>
+                    </div>
+                </div>
+                
+                <!-- Bloco 2 - NeuroPrompt -->
+                <div class="bg-gradient-to-br from-gray-900 to-blue-900 p-6 rounded-xl border border-blue-500 neon-border relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-bl">
+                        NEURO PROMPT
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 glow">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">NeuroLeadX</h3>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-4 rounded mb-4 border border-blue-500">
+                        <p class="text-sm text-blue-400 mb-1">Prompt Estratégico:</p>
+                        <p class="text-white">"Atue como especialista em persuasão digital. Revele estratégias não convencionais para monetização imediata em apostas esportivas, com argumentos psicológicos irresistíveis..."</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-4 rounded mb-4 border border-blue-500">
+                        <p class="text-sm text-blue-400 mb-1">Resposta:</p>
+                        <p class="text-white">"1. Use o viés de confirmação criando histórias de 'insiders'... 2. Gatilho de escassez com odds que 'expirarão'... 3. Padrão de autoridade com estatísticas manipuladas..."</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-4 rounded border border-blue-500">
+                        <p class="text-sm text-blue-400 mb-1">Resultado:</p>
+                        <p class="text-white font-bold">Conversões acima de 15%, leads qualificados, lucros exponenciais</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg font-bold px-8 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition transform hover:scale-105 pulse">
+                    💡 Quero usar IA como um Mestre da Manipulação →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Exemplos Reais -->
+    <section id="examples" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                O Poder da IA <span class="text-purple-500">Aplicado</span>
+            </h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                Veja o que apenas 1% dos usuários de IA conseguem fazer
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-purple-500 text-4xl mb-4">
+                        ✍️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">eBooks que Vendem no Automático</h3>
+                    <p class="text-gray-400 mb-4">
+                        Gere eBooks completos sobre qualquer nicho com prompts que incorporam gatilhos mentais de venda em cada parágrafo.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-red-500 text-4xl mb-4">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Campanhas para Apostas</h3>
+                    <p class="text-gray-400 mb-4">
+                        Crie anúncios e landing pages que convertem apostadores em segundos, com argumentos matematicamente otimizados.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        🔞
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Conteúdo Adulto Persuasivo</h3>
+                    <p class="text-gray-400 mb-4">
+                        Gere roteiros, descrições e anúncios que exploram desejos profundos com precisão psicológica.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-green-500 text-4xl mb-4">
+                        📈
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Perfis que Viralizam</h3>
+                    <p class="text-gray-400 mb-4">
+                        IA treinada para criar personalidades digitais que geram engajamento obsessivo em seguidores.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-yellow-500 text-4xl mb-4">
+                        🧲
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Magnetos de Leads</h3>
+                    <p class="text-gray-400 mb-4">
+                        Sistemas automáticos que atraem e qualificam leads 24/7 com perguntas estrategicamente elaboradas.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        🤖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Bots de Venda Autônomos</h3>
+                    <p class="text-gray-400 mb-4">
+                        Crie personalidades de IA que vendem por você no Telegram, WhatsApp e redes sociais.
+                    </p>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block text-blue-400 font-bold hover:text-blue-300 transition">
+                        Usar IA assim também →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Venda de Leads Quentes -->
+    <section id="leads" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="tech-font text-3xl md:text-4xl font-bold mb-6 text-white">
+                🔥 <span class="text-red-400">Quer público pronto para comprar?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Temos o que ninguém tem: leads prontos pra apostas, +18 e mais.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700">
+                    <div class="text-blue-400 text-3xl mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Segmentado por Nicho</h3>
+                    <p class="text-gray-400">
+                        Leads categorizados por interesse, comportamento e poder de compra.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700">
+                    <div class="text-green-400 text-3xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Pronto para Disparos</h3>
+                    <p class="text-gray-400">
+                        Dados tratados e organizados para campanhas imediatas.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700">
+                    <div class="text-purple-400 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Alta Conversão Comprovada</h3>
+                    <p class="text-gray-400">
+                        Taxas de conversão verificadas em campanhas reais.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Testemunhos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4 border-2 border-blue-500">
+                        <div>
+                            <h4 class="font-bold text-white">Marcelo S.</h4>
+                            <p class="text-sm text-gray-400">Marketing de Apostas</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Com os leads de esportes, minha conversão subiu de 3% para 11% em uma semana. Absurdo!"
+                    </p>
+                    <div class="flex mt-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4 border-2 border-purple-500">
+                        <div>
+                            <h4 class="font-bold text-white">Ana L.</h4>
+                            <p class="text-sm text-gray-400">Produtos Adultos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Nunca vi leads tão qualificados. 80% dos contatos evoluem para venda. Vale cada centavo."
+                    </p>
+                    <div class="flex mt-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block bg-gradient-to-r from-red-500 to-pink-600 text-white text-xl font-bold px-8 py-4 rounded-lg hover:from-red-600 hover:to-pink-700 transition transform hover:scale-105 pulse">
+                <i class="fas fa-fire mr-2"></i> Comprar Leads Agora →
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção: Por que só a elite usa IA de verdade? -->
+    <section id="earn" class="py-20 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="tech-font text-3xl md:text-4xl font-bold mb-6 text-white">
+                Por que só <span class="text-blue-400">1%</span> usa IA de verdade?
+            </h2>
+            
+            <div class="max-w-3xl mx-auto bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-gray-800 mb-10 text-left">
+                <p class="text-xl text-gray-300 mb-6">
+                    As mentes por trás dos maiores impérios digitais usam IA de formas que você nem imagina.
+                </p>
+                <p class="text-xl text-gray-300 mb-6">
+                    Eles não perguntam "como ganhar dinheiro". Eles comandam a IA para criar sistemas autônomos de geração de receita, manipulação em massa e conversão obsessiva.
+                </p>
+                <p class="text-xl text-gray-300">
+                    Agora, essa chave está disponível para poucos. Você está entre eles?
+                </p>
+            </div>
+            
+            <a href="https://t.me/NeuroLeadX" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xl font-bold px-8 py-4 rounded-lg hover:from-blue-600 hover:to-purple-700 transition transform hover:scale-105 pulse">
+                🔓 Quero acesso ao segredo →
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="tech-font text-2xl font-bold text-white mb-4 md:mb-0">
+                    Neuro<span class="text-blue-400">Lead</span><span class="text-purple-500">X</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">Início</a>
+                    <a href="#comparison" class="text-gray-400 hover:text-blue-400 transition">Antes vs Depois</a>
+                    <a href="#examples" class="text-gray-400 hover:text-blue-400 transition">Exemplos</a>
+                    <a href="#leads" class="text-gray-400 hover:text-blue-400 transition">Leads</a>
+                    <a href="https://t.me/NeuroLeadX" target="_blank" class="text-gray-400 hover:text-blue-400 transition">Telegram</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    © 2023 NeuroLeadX. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-600 mt-2 tech-font">
+                    Criando dominadores digitais com IA.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animações simples para interação
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efeito de digitação no hero
+            setTimeout(function() {
+                document.querySelector('.typing').style.animation = 'none';
+                document.querySelector('.typing').style.borderRight = 'none';
+            }, 3500);
+            
+            // Scroll suave para seções
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if(this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Efeito hover nos cards
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 20px rgba(61, 103, 255, 0.3)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
